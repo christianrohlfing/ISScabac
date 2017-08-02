@@ -3,9 +3,9 @@
 This software package provides
 * code for reproducing the experimental results of the ICASSP 2018 paper "Adaptive coding of non-negative factorization parameters with application to informed source separation" by Max Bläser, Christian Rohlfing, Yingbo Gao and Mathias Wien.
 * additionally a MATLAB interface to the context-based adaptive binary arithmetic coding (CABAC) engine
-  1. We extracted the CABAC engine out of the [HEVC test model (HM)](https://hevc.hhi.fraunhofer.de/svn/svn_HEVCSoftware/) by the Joint Collaborative Team on Video Coding (JCT-VC).
+  1. We extracted the CABAC engine out of the [HEVC test model (HM)](https://hevc.hhi.fraunhofer.de/svn/svn_HEVCSoftware/) by the [Joint Collaborative Team on Video Coding (JCT-VC)](https://www.itu.int/en/ITU-T/studygroups/2013-2016/16/Pages/video/jctvc.aspx).
   2. Building on this, we provide a MATLAB MEX interface.
-  3. Finally, we provide a MATLAB CABAC class for easy usage.
+  3. Additionally, we provide a MATLAB CABAC class for easy usage.
 
 # Install
 1. Clone or download this repository.
