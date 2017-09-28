@@ -1,5 +1,5 @@
 # General information
-<img align="right" src="https://git.rwth-aachen.de/rohlfing/ISScabac/raw/export/CABAC/images/cabacHist.png">
+<img align="right" src="https://raw.githubusercontent.com/christianrohlfing/ISScabac/master/CABAC/images/cabacHist.png">
 
 This software package provides
 * code for reproducing the experimental results of the ICASSP 2018 paper "Adaptive coding of non-negative factorization parameters with application to informed source separation" by [Max Bläser](http://www.ient.rwth-aachen.de/cms/m_blaeser/), [Christian Rohlfing](http://www.ient.rwth-aachen.de/cms/c_rohlfing/), Yingbo Gao and [Mathias Wien](http://www.ient.rwth-aachen.de/cms/wien/).
@@ -22,9 +22,15 @@ You find further information [here](http://www.ient.rwth-aachen.de/cms/icassp201
         TITLE = {Adaptive coding of non-negative factorization parameters with application to informed source separation},
         AUTHOR = {Bl{\"a}ser, M., Rohlfing, C., Gao, Y., Wien, M.},
         BOOKTITLE = {{43rd International Conference on Acoustics, Speech and Signal Processing (ICASSP)}},
-        ADDRESS = {Seoul, South Korea},
+        ADDRESS = {t.b.d.},
         PUBLISHER = {{IEEE}},
         SERIES = {Proceedings of the 43rd International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
         YEAR = {2018},
         COMMENT = {submitted},
     }
+
+# References
+- CABAC engine extracted from HEVC test model (HM), https://hevc.hhi.fraunhofer.de/svn/svn_HEVCSoftware/
+- Audio data taken from BASS-dB, http://bass-db.gforge.inria.fr/BASS-dB/?show=mix&mixtype=stereo_udet_inst&mix=mix_21
+- betaNTF.m taken from Antoine Liutkus, https://de.mathworks.com/matlabcentral/fileexchange/38109-simple-to-use-nmf-ntf-with-beta-divergence
+- quantize.m taken from Antoine Liutkus, https://de.mathworks.com/matlabcentral/fileexchange/58024-quantize
