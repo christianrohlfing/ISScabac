@@ -1,4 +1,5 @@
 # General information
+<img align="right" src="https://git.rwth-aachen.de/rohlfing/ISScabac/raw/export/CABAC/images/cabacHist.png">
 
 This software package provides
 * code for reproducing the experimental results of the ICASSP 2018 paper "Adaptive coding of non-negative factorization parameters with application to informed source separation" by [Max Bläser](http://www.ient.rwth-aachen.de/cms/m_blaeser/), [Christian Rohlfing](http://www.ient.rwth-aachen.de/cms/c_rohlfing/), Yingbo Gao and [Mathias Wien](http://www.ient.rwth-aachen.de/cms/wien/).
