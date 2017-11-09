@@ -22,7 +22,7 @@ You find further information [here](http://www.ient.rwth-aachen.de/cms/icassp201
         TITLE = {Adaptive coding of non-negative factorization parameters with application to informed source separation},
         AUTHOR = {Bl{\"a}ser, M., Rohlfing, C., Gao, Y., Wien, M.},
         BOOKTITLE = {{43rd International Conference on Acoustics, Speech and Signal Processing (ICASSP)}},
-        ADDRESS = {t.b.d.},
+        ADDRESS = {Calgary, Alberta, Canada},
         PUBLISHER = {{IEEE}},
         SERIES = {Proceedings of the 43rd International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
         YEAR = {2018},
