@@ -25,8 +25,7 @@ You find further information [here](http://www.ient.rwth-aachen.de/cms/icassp201
         ADDRESS = {Calgary, Alberta, Canada},
         PUBLISHER = {{IEEE}},
         SERIES = {Proceedings of the 43rd International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-        YEAR = {2018},
-        COMMENT = {accepted for publication},
+        YEAR = {2018}
     }
 
 # References
