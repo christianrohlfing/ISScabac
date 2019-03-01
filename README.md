@@ -13,7 +13,7 @@ This software package provides
 2. Under Linux, run MATLAB with `LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 [INSERT_MATLAB_PATH_HERE]/bin/matlab &`. Otherwise, the following error might occur: `version GLIBCXX_3.4.21 not found`.
 3. To run our code of our proposed ISS method, go to the `ISS` folder and run `ISS.m`.
 4. To run a simple demo explaining the basic usage of CABAC, go directly to the `CABAC` folder and run `cabacDemo.m`.
-5. We provided already compiled MEX files for Windows (tested on Windows 10) and Linux (tested on Ubuntu 16.04). However, if you need to compile the MEX file again, use the following command `mex CXXFLAGS="\$CXXFLAGS -std=c++11" SimpleCABACMex.cpp`.
+5. We provided already compiled MEX files for Windows (tested on Windows 10) and Linux (tested on Ubuntu 16.04). However, if you need to compile the MEX file again, use the following command `mex CXXFLAGS="\$CXXFLAGS -std=c++11" SimpleCABACMex.cpp`. If you want to debug, add a `-g` option to the `mex` call above. 
 
 # Publication
 You find further information [here](http://www.ient.rwth-aachen.de/cms/icassp2018/). If you use this software, please reference the following publication:
