@@ -47,7 +47,7 @@ CABAC_BitstreamFile::~CABAC_BitstreamFile()
 {
 }
 
-bool CABAC_BitstreamFile::openOutputFile(char *cOtuputFileName)
+bool CABAC_BitstreamFile::openOutputFile(const char *cOtuputFileName)
 {
   assert(!bFileOpened);
   // Open output file for writing
@@ -64,7 +64,7 @@ bool CABAC_BitstreamFile::openOutputFile(char *cOtuputFileName)
   }
 }
 
-bool CABAC_BitstreamFile::openInputFile(char *cInputFileName)
+bool CABAC_BitstreamFile::openInputFile(const char *cInputFileName)
 {
   bitstreamFile.open(cInputFileName, ifstream::in | ifstream::binary);
   if (!bitstreamFile)

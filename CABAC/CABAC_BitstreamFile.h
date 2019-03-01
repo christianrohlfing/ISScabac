@@ -53,8 +53,8 @@ public:
   CABAC_BitstreamFile();
   ~CABAC_BitstreamFile();
 
-  bool openOutputFile(char *cOtuputFileName);
-  bool openInputFile(char *cInputFileName);
+  bool openOutputFile(const char *cOtuputFileName);
+  bool openInputFile(const char *cInputFileName);
   void closeFile();
 
   // append uiNumberOfBits least significant bits of uiBits to the current bitstream
