@@ -42,7 +42,7 @@
 #include <assert.h>
 #include <vector>
 #include <bitset>
-
+#include <string>
 #include "CABAC_ArithmeticEncoder.h"
 #include "CABAC_ArithmeticDecoder.h"
 #include "CABAC_BitstreamFile.h"
@@ -70,7 +70,7 @@ class CABAC {
 public:
   CABAC() {};
   ~CABAC() {};
-  char* fn;
+  std::string fn;
   bool bFileNameIsSet;
   CABAC_BitstreamFile bitStream;
   CABAC_ContextModels encoderModels;
@@ -105,7 +105,7 @@ void mexFunction(
 )
 {
   CABAC *c; // pointer to (new) instance of the CABAC class 
-  char* fn = 0;
+  std::string fn;
   char cmd[64]; // temp char array to hold the command
 
   if (nrhs < 1 || !mxIsClass(prhs[0], "char") || mxGetString(prhs[0], cmd, sizeof(cmd))) 
@@ -136,7 +136,7 @@ void mexFunction(
      }
      else
      {
-       fn = mxArrayToString(prhs[1]);
+       fn = std::string(mxArrayToString(prhs[1]));
        if (!mxIsClass(prhs[2], "double"))
        {
          mexErrMsgTxt("Error: invalid context initialization\n");
@@ -147,6 +147,7 @@ void mexFunction(
 
          // set up an instance
          c = new CABAC;
+         mexMakeMemoryPersistent((void*)c);
 #if RWTH_CABAC_DEBUG_OUTPUT
          mexPrintf("CABAC instance created. Pointer address c = %p\n", c);
 #endif
@@ -176,7 +177,7 @@ void mexFunction(
          }
 
 #if RWTH_CABAC_DEBUG_OUTPUT
-         mexPrintf("Status: CABAC successfully initialized. Writing / Reading from %s \n",c->fn);
+         mexPrintf("Status: CABAC successfully initialized. Writing / Reading from %s \n",c->fn.c_str());
 #endif
        }
      }
@@ -191,13 +192,13 @@ void mexFunction(
     c = getPointer(prhs);
     assert(c);
     // open bitstream for writing
-    if (!c->bitStream.openOutputFile(c->fn)) 
+    if (!c->bitStream.openOutputFile(c->fn.c_str())) 
     {
-      mexPrintf("Error: filename %s cannot be opened for writing\n", c->fn);
+      mexPrintf("Error: filename %s cannot be opened for writing\n", c->fn.c_str());
       mexErrMsgTxt("Error: bitstreamfile access error\n");
     }
 #if RWTH_CABAC_DEBUG_OUTPUT
-    mexPrintf("Status: filename: %s opened for writing\n", c->fn);
+    mexPrintf("Status: filename: %s opened for writing\n", c->fn.c_str());
 #endif
     // set bitstream to encoder
     c->encoder.setBitstream(&(c->bitStream));
@@ -284,13 +285,13 @@ void mexFunction(
     }
     c = getPointer(prhs);
     // open bitstream for reading
-    if (!c->bitStream.openInputFile(c->fn)) 
+    if (!c->bitStream.openInputFile(c->fn.c_str())) 
     {
-      mexPrintf("Error: filename %s cannot be opened for reading\n", c->fn);
+      mexPrintf("Error: filename %s cannot be opened for reading\n", c->fn.c_str());
       mexErrMsgTxt("Error: bitstreamfile access error\n");
     }
 #if RWTH_CABAC_DEBUG_OUTPUT
-    mexPrintf("Status: filename %s opened for reading\n", c->fn);
+    mexPrintf("Status: filename %s opened for reading\n", c->fn.c_str());
 #endif
     // set bitstream to decoder
     c->decoder.setBitstream(&(c->bitStream));
